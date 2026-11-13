@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>CaseMgr — ย้ายที่อยู่แล้ว</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="3;url=https://enterkkcp-ai-pokklong.github.io/casemgr/">
+<style>body{font:16px/1.6 system-ui,'Noto Sans Thai',sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#f4f6fb;color:#1f2937}main{max-width:26rem;padding:1.5rem;text-align:center}a{color:#1a56db}</style>
+</head>
+<body>
+<main>
+<h1>CaseMgr ย้ายที่อยู่แล้ว</h1>
+<p>กำลังพาไปที่อยู่ใหม่…</p>
+<p><a id="go" href="https://enterkkcp-ai-pokklong.github.io/casemgr/">ถ้าไม่เปลี่ยนหน้าเอง กดที่นี่</a></p>
+</main>
+<script>
+/* ส่งต่อไปโดเมนใหม่โดยคงพาธ + พารามิเตอร์ (?…) + #… เดิม — โดเมนปลายทางตายตัว ไม่รับค่าจากผู้ใช้ */
+(function () {
+  var p = location.pathname.replace(/^\/casemgr(?=\/|$)/, '');
+  if (p === '' || p === '/404.html' || p === '/index.html') p = '/';
+  var to = 'https://enterkkcp-ai-pokklong.github.io/casemgr' + p + location.search + location.hash;
+  document.getElementById('go').href = to;
+  location.replace(to);
+})();
+</script>
+</body>
+</html>
